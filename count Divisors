@@ -1,0 +1,21 @@
+#include<stdio.h>
+int countDivisors(int n,int D[10]){
+	int count=0;
+	for(int i=1;i<=n;i++){
+		if(n%i==0){
+			D[count]=i;
+		 count++;
+		}
+	}
+	return count;
+}
+int main(){
+	int n,count,D[10];
+	printf("give n:");
+	scanf("%d",&n);
+	count=countDivisors(n,D);
+	for(int i=0;i<count;i++){
+	 printf("Divisors:%d",D[i]);
+	}
+	printf("count Divisors:%d",count);
+}
