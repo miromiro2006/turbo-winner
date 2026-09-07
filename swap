@@ -1,0 +1,16 @@
+#include<stdio.h>
+void swap(int *a, int *b){
+	int temp;
+	temp=*a;
+	*a=*b;
+	*b=temp;
+}
+int main(){
+	int a,b;
+	printf("give a and b;");
+	scanf("%d",&a);
+	scanf("%d",&b);
+	printf("%d and %d befor",a,b);
+	swap(& a,& b);
+	printf("%d and %d after",a,b);
+}
