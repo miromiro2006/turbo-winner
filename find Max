@@ -1,0 +1,22 @@
+#include<stdio.h>
+int findMax(int *A, int n){
+	int max;
+	max=*A;
+	for(int i=0;i<n;i++){
+		if(*(A+i)>max){
+			max=*(A+i);
+		}
+	}
+	return max;
+}
+int main(){
+	int n,max,A[100];
+	printf("give n:");
+	scanf("%d",&n);
+	for(int i=0;i<n;i++){
+		printf("give A[%d]:",i);
+		scanf("%d",&A[i]);
+	}
+	max=findMax(A,n);
+	printf("max:%d",max);
+}
