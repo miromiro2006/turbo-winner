@@ -1,0 +1,23 @@
+#include<stdio.h>
+int gcd(int a, int b){
+	int PGCD=0,min;
+	if(a>b){
+		min=b;
+	}else{
+		min=a;
+	}
+	for(int i=1;i<=min;i++){
+		if(a%i==0&&b%i==0){
+		 PGCD=i;
+		}
+	}
+		return PGCD;
+}
+int main(){
+	int a,b,PGCD;
+	printf("give a and b:");
+	scanf("%d",&a);
+	scanf("%d",&b);
+	PGCD=gcd(a,b);
+	printf("PGCD:%d",PGCD);
+}
