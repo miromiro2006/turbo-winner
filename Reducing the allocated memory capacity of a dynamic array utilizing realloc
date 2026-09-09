@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+	int n,*p,i,new_n;
+	printf("give n:");
+	scanf("%d",&n);
+	p=malloc(n*sizeof(int));
+	for(i=0;i<n;i++){
+		printf("give A[%d]:",i);
+		scanf("%d",&*(p+i));
+	}
+	do{
+		printf("give new_n:");
+	 scanf("%d",&new_n);
+	}while(new_n>=n);
+	p=realloc(p,sizeof(int)*new_n);
+	for(i=0;i<new_n;i++){
+		printf("A[%d]:%d\n",i,*(p+i));
+	}
+	free(p);
+}
