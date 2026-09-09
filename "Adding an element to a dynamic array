@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+	int n,*p,i,x;
+	printf("give n:");
+	scanf("%d",&n);
+	p=malloc(n*sizeof(int));
+	for(i=0;i<n;i++){
+		printf("give A[%d]:",i);
+		scanf("%d",&*(p+i));
+	}
+	printf("give x:");
+ scanf("%d",&x);
+	p=realloc(p,sizeof(int)*(n+1));
+	*(p+n)=x;
+	for(i=0;i<n+1;i++){
+		printf("A[%d]:%d\n",i,*(p+i));
+	}
+	free(p);
+}
