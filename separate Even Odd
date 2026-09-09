@@ -1,0 +1,30 @@
+#include<stdio.h>
+void separateEvenOdd(int *A, int n){
+	int left=0,right=n-1,temp;
+	while(left<right){
+		if((*(A+left)%2!=0)&&(*(A+right)%2==0)){
+			temp=*(A+left);
+		 *(A+left)=*(A+right);
+	  *(A+right)=temp;
+	  left++;
+	 right--;
+		}else if(*(A+left)%2!=0){
+			right--;
+		}else{
+			left++;
+		}
+	}
+}
+int main(){
+	int n,i,A[100];
+	printf("give n:");
+ scanf("%d",&n);
+	for(i=0;i<n;i++){
+		printf("give A[%d]",i);
+		scanf("%d",&A[i]);
+	}
+	separateEvenOdd(A,n);
+	for(i=0;i<n;i++){
+		printf("A[%d]:%d",i,A[i]);
+	}
+}
