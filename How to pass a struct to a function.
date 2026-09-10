@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<stdlib.h>
+typedef struct Student{
+		char name[20];
+		int age;
+		int average;
+	}Student;
+void stud(Student S){
+	printf("name:%s,age:%d,average:%d",S.name,S.age,S.average);
+}
+int main(){
+	Student S;
+	printf("give name:");
+	scanf("%s",S.name);
+	printf("give age:");
+	scanf("%d",&S.age);
+	printf("give average:");
+	scanf("%d",&S.average);
+	stud(S);
+}
