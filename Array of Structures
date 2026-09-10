@@ -1,0 +1,27 @@
+#include<stdio.h>
+typedef struct student{
+	char name[20];
+ int age;
+ int average;
+}student;
+ int main(){
+ 	student S[100];
+ 	int n,i;
+ 	do{
+ 		printf("give n:\n");
+ 		scanf("%d",&n);
+		}while(n<=0);
+		for(i=0;i<n;i++){
+			printf("give name student %d:",i);
+			scanf("%s",S[i].name);
+			printf("give age student %d:",i);
+			scanf("%d",&S[i].age);
+			printf("give average student %d:",i);
+			scanf("%d",&S[i].average);
+		}
+		for(i=0;i<n;i++){
+			printf("name student %d:%s\n",i,S[i].name);
+			printf("age student %d:%d\n",i,S[i].age);
+			printf("average student %d:%d\n",i,S[i].average);
+		}
+	}
